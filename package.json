@@ -10,10 +10,12 @@
     "antd": "^5.1.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "dbserver": "json-server --watch db/db.json -p 3001",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -36,5 +38,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-react": "^7.32.1"
   }
 }
