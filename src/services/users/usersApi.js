@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-// Пока не работает, сделано только для проверки
+// !!! Пока не работает, сделано только для проверки
 export const usersApi = createApi({
   reducerPath: "users/api",
   baseQuery: fetchBaseQuery({
