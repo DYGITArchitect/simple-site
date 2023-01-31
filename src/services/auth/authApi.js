@@ -50,13 +50,14 @@ export const userSlice = createSlice({
     });
     builder.addCase(login.pending, (state) => {
       state.error = "";
-      state.isAuth = true;
+      state.isAuth = false;
       state.isLoading = true;
       console.log("login pending");
     });
     builder.addCase(login.rejected, (state, action) => {
       state.error = action.payload;
       state.isLoading = false;
+      state.isAuth = false;
       setAuthLocalStore(null);
       console.log("login rejected");
     });
@@ -77,6 +78,7 @@ export const userSlice = createSlice({
       state.isLoading = false;
       state.isAuth = false;
       state.username = "";
+      setAuthLocalStore(null);
       console.log("logout rejected");
     });
   },
