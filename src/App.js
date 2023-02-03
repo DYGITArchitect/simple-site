@@ -1,3 +1,4 @@
+import { ConfigProvider } from "antd";
 import { useDispatch } from "react-redux";
 import "./App.css";
 import MainApp from "./MainApp";
@@ -10,7 +11,16 @@ function App() {
 
   return (
     <div className="App" data-testid="main-div">
-      <MainApp />
+      <ConfigProvider
+        theme={{
+          token: {
+            colorPrimary: "#5eb153",
+          },
+          //algorithm: theme.darkAlgorithm,
+        }}
+      >
+        <MainApp />
+      </ConfigProvider>
     </div>
   );
 }
