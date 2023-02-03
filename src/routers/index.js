@@ -5,4 +5,5 @@ export const RoutesNames = {
   ERROR: "error",
   ABOUT: "about",
   TRAINIGLIST: "trainings",
+  STORE: "store",
 };
