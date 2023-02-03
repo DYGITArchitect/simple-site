@@ -1,8 +1,21 @@
-  .site-layout-content {
-    height: calc(100vh - 64px - 64px - 15px);
-    padding: 5px;  
-  }
+.site-layout-content {
+  height: calc(100vh - 64px - 64px - 15px);
+  padding: 5px;
+  background-color: rgb(220, 235, 224);  
+}
 
-  .h100 {
-    height: calc(100vh - 64px - 64px);
-  }
+.h100 {
+  height: calc(100vh - 64px - 64px);
+}
+
+.ant-layout .ant-layout-header {
+  background: #5eb153;
+}
+
+.ant-layout .ant-layout-footer {
+  background: #5eb153;
+}
+
+.ant-menu-dark {
+  background: #5eb153;
+}

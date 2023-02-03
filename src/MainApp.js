@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import { Content, Footer } from "antd/es/layout/layout";
+import { Content } from "antd/es/layout/layout";
 import "./App.css";
 import AppRouter from "./components/AppRouter";
 import DYGFooter from "./components/Footer/DYGFooter";

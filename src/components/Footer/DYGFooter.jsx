@@ -1,16 +1,13 @@
 import { Row } from 'antd';
 import { Footer } from 'antd/es/layout/layout';
 import React from 'react';
-import styles from './DYGFooter.module.css'
-
 
 const DYGFooter = () => {
-  return(<Footer>
-    <Row justify={'center'} >
-        FOOTER...
+  return(<Footer >
+    <Row justify={'center'} style={{color: 'white'}}>
+      © 2023 ООО «Иванов Иван Иванович»
     </Row>
     </Footer>)
 };
-
 
 export default DYGFooter

@@ -2,7 +2,6 @@ import { Button, Checkbox, Form, Input } from 'antd';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../../services/auth/authApi';
-import styles from './DYGLogin.module.css'
 
 const DYGLogin = () => {
     const dispatch = useDispatch();

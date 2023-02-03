@@ -1,5 +1,4 @@
 import { Header } from 'antd/es/layout/layout';
-import styles from './DYGHeader.module.css'
 import React from 'react';
 import { Col, Menu, Row } from 'antd';
 import { useNavigate } from 'react-router-dom';
