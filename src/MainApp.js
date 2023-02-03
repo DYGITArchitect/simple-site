@@ -1,34 +1,24 @@
-import { Button } from "antd";
-import { useDispatch, useSelector } from "react-redux";
+import { Layout } from "antd";
+import { Content, Footer } from "antd/es/layout/layout";
 import "./App.css";
 import AppRouter from "./components/AppRouter";
-import { login, logout } from "./services/auth/authApi";
+import DYGFooter from "./components/Footer/DYGFooter";
+import DYGHeader from "./components/Header/DYGHeader";
 
 function MainApp() {
-  const dispatch = useDispatch();
-  const { isAuth, username } = useSelector((state) => state.login);
   console.log("MainApp started");
-
-  const appLogin = () => {
-    console.log("appLogin Pushed");
-    dispatch(login({ username: "dyg2", password: "123" }));
-  };
-
-  const appLogout = () => {
-    console.log("appLogout Pushed");
-    dispatch(logout({ username: "dyg2" }));
-  };
 
   return (
     <div className="App" data-testid="main-div">
-      {isAuth && <div>${username}</div>}
-      {/* <button onClick={}>
-        login
-      </button> */}
-      <Button onClick={appLogin}>LOGIN</Button>
-      <Button onClick={appLogout}>LOGOUT</Button>
-      <AppRouter />
-      WORKING ...
+      <Layout>
+        <DYGHeader />
+        <Layout>
+          <Content className="site-layout-content">
+            <AppRouter />
+          </Content>
+        </Layout>
+        <DYGFooter />
+      </Layout>
     </div>
   );
 }
