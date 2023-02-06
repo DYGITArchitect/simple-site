@@ -4,12 +4,13 @@ import { Col, Menu, Row } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { RoutesNames } from '../../routers';
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../services/auth/authApi';
+import { logout } from '../../redux/auth/authApi';
+import { getLoginState } from '../../redux/auth/selectors/loginSelector';
 
 
 const DYGHeader = () => {
   const navigate = useNavigate()
-  const { isAuth, username } = useSelector((state) => state.login);
+  const { isAuth, username } = useSelector(getLoginState);
   const dispatch = useDispatch();
 
   const menuItems = []

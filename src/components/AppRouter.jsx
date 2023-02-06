@@ -1,10 +1,11 @@
 import { useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
+import { getLoginState } from '../redux/auth/selectors/loginSelector';
 import { privateRouter } from '../routers/privateRouter';
 import { publicRouter } from '../routers/publicRouter';
 
 const AppRouter = () => {
-    const { isAuth } = useSelector((state) => state.login);
+    const { isAuth } = useSelector(getLoginState);
 
     console.log(`This is AppRouter with isAuth = ${isAuth}`);
     //console.log(`This is AppRouter with username = ${username}`);

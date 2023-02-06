@@ -1,5 +1,10 @@
 {
   "name": "simple-site",
+  "jest": {
+    "transformIgnorePatterns": [
+      "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
+    ]
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -2,7 +2,7 @@ import { ConfigProvider } from "antd";
 import { useDispatch } from "react-redux";
 import "./App.css";
 import MainApp from "./MainApp";
-import { getAuthLocalStoreValues } from "./services/auth/authApi";
+import { getAuthLocalStoreValues } from "./redux/auth/authApi";
 
 function App() {
   const dispatch = useDispatch();
@@ -10,7 +10,7 @@ function App() {
   dispatch(getAuthLocalStoreValues());
 
   return (
-    <div className="App" data-testid="main-div">
+    <div className="App" data-testid="app-div">
       <ConfigProvider
         theme={{
           token: {

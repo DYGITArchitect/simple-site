@@ -1,12 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authApi from "../services/auth/authApi";
-import { usersApi } from "../services/users/usersApi";
+import authApi from "../redux/auth/authApi";
+import { usersApi } from "../redux/users/usersApi";
 
-export const store = configureStore({
-  reducer: {
-    [usersApi.reducerPath]: usersApi.reducer,
-    login: authApi,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(usersApi.middleware),
-});
+export const createReduxStore = (initialState) => {
+  return configureStore({
+    reducer: {
+      [usersApi.reducerPath]: usersApi.reducer,
+      login: authApi,
+    },
+    preloadedState: initialState,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(usersApi.middleware),
+  });
+};
