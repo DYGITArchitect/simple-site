@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Store = () => {
-  return(<div>
+  return(<div data-testid="store-page">
     STORE ...
   </div>)
 };

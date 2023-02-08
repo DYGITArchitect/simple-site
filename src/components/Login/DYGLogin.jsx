@@ -1,14 +1,21 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { login } from '../../redux/auth/authApi';
 
 const DYGLogin = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const location = useLocation();
 
-    const onFinish = (values) => {
+    const redirectUrl = location.state?.path || "/"
+
+    const onFinish = async (values) => {
         console.log('Success:', values);
-        dispatch(login({ username: values.username, password: values.password }));
+        await dispatch(login({ username: values.username, password: values.password }));
+        console.log('Success2:', redirectUrl);
+        navigate(redirectUrl, {replace: true})
     };
     
     const onFinishFailed = (errorInfo) => {

@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const TrainingList = () => {
-  return(<div>TraingList ... </div>)
+  return(<div data-testid="training-page">TraingList ... </div>)
 };
 
 

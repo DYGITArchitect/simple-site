@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const MainPage = () => {
-  return(<div>
+  return(<div data-testid="main-page">
     MAIN ...
   </div>)
 };

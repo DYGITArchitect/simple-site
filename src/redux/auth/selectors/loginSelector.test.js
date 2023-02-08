@@ -1,21 +1,15 @@
 import { render } from "@testing-library/react";
-import { App } from "antd";
-import { Provider } from "react-redux";
-import { MemoryRouter } from "react-router-dom";
-import { createReduxStore } from "../../../store/store";
+import { renderAppRouterHelper } from "../../../test/helper/renderAppRouterHelper";
 import { getLoginState } from "./loginSelector";
 
 describe("Test login selector describe", () => {
-  const setup = () => {
+  const setup = (container) => {
     render(
-      <Provider store={createReduxStore()}>
-        <MemoryRouter initialEntries={["/"]}>
-          <App />
-        </MemoryRouter>
-      </Provider>
+      renderAppRouterHelper(undefined, {
+        rout: "/",
+      })
     );
   };
-
   test("Login empty selector", () => {
     setup();
 

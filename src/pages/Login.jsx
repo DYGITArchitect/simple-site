@@ -3,7 +3,7 @@ import React from 'react';
 import DYGLogin from '../components/Login/DYGLogin';
 
 const Login = () => {  
-  return(<Layout>
+  return(<Layout data-testid="login-page">
     <Row justify="center" align="middle" className="h100">
         <Card>
             <DYGLogin/>
@@ -11,6 +11,5 @@ const Login = () => {
     </Row>
 </Layout>)
 };
-
 
 export default Login

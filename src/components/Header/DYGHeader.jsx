@@ -55,10 +55,11 @@ const DYGHeader = () => {
           navigate(RoutesNames.TRAINIGLIST)
           break;
       case '3':
-        if (isAuth) 
+        // if (isAuth){           
           navigate(RoutesNames.COURSELIST) 
-        else 
-          navigate(RoutesNames.LOGIN)         
+        // }
+        // else 
+        //   navigate(RoutesNames.LOGIN)
         break;
       case '4':
         navigate(RoutesNames.STORE)
@@ -72,7 +73,9 @@ const DYGHeader = () => {
     }
   }
 
-  return(<Header>
+  return(
+  <div data-testid="DYGHeader">
+    <Header>
       <Row justify="end">        
         <Col flex="auto">
         <Menu style={{minWidth: "400px"}}
@@ -96,7 +99,10 @@ const DYGHeader = () => {
           />
         </Col>        
       </Row>      
-  </Header>)
+  </Header>
+
+  </div>  
+  )
 };
 
 export default DYGHeader
